@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISAN MITRA - Farmer's Friend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <div class="logo">
+                <h1>KISAN MITRA</h1>
+                <p>Your Farming Companion</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="farmerId">Farmer ID</label>
+                    <input type="text" id="farmerId" placeholder="Enter your farmer ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div class="dashboard-container" id="dashboardPage">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo-small">KISAN MITRA</div>
+            <div class="nav-menu">
+                <a class="nav-item" id="homeBtn">Home</a>
+                <a class="nav-item" id="cropHealthBtn">Crop Health Tool</a>
+                <a class="nav-item" id="fertilizersBtn">Fertilizers</a>
+                <a class="nav-item" id="sellCropBtn">Sell Your Crop</a>
+                <a class="nav-item" id="chatbotBtn">Chatbot</a>
+                <div class="dropdown">
+                    <a class="nav-item">Services</a>
+                    <div class="dropdown-content">
+                        <a id="orderSaplingsBtn">Order Saplings</a>
+                        <a id="coldStorageBtn">Nearby Cold Storage</a>
+                        <a id="droneServiceBtn">Book Drone Service</a>
+                        <a id="marketPriceBtn">Market Price</a>
+                        <a id="workersBtn">Workers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user-info">
+                <span class="user-name" id="userDisplayName">Farmer Name</span>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Main Dashboard Content (Smart Monitoring) -->
+        <div class="dashboard-content" id="homeContent">
+            <h2 class="dashboard-title">Smart Farm Monitoring Dashboard</h2>
+            
+            <div class="sensor-grid">
+                <!-- Soil Moisture Sensor -->
+                <div class="sensor-card">
+                    <div class="sensor-icon">💧</div>
+                    <h3 class="sensor-title">Soil Moisture</h3>
+                    <div class="sensor-value">42%</div>
+                    <span class="sensor-status status-normal">Normal</span>
+                </div>
+                
+                <!-- Temperature Sensor -->
+                <div class="sensor-card">
+                    <div class="sensor-icon">🌡️</div>
+                    <h3 class="sensor-title">Temperature</h3>
+                    <div class="sensor-value">28°C</div>
+                    <span class="sensor-status status-normal">Normal</span>
+                </div>
+                
+                <!-- Humidity Sensor -->
+                <div class="sensor-card">
+                    <div class="sensor-icon">💦</div>
+                    <h3 class="sensor-title">Humidity</h3>
+                    <div class="sensor-value">65%</div>
+                    <span class="sensor-status status-warning">Slightly High</span>
+                </div>
+                
+                <!-- pH Level -->
+                <div class="sensor-card">
+                    <div class="sensor-icon">🧪</div>
+                    <h3 class="sensor-title">Soil pH</h3>
+                    <div class="sensor-value">6.5</div>
+                    <span class="sensor-status status-normal">Normal</span>
+                </div>
+            </div>
+            
+            <div class="notification-panel">
+                <h3 class="notification-title">🔔 Alerts & Notifications</h3>
+                <div class="notification-list">
+                    <div class="notification-item warning">
+                        <div class="notification-time">Today, 10:15 AM</div>
+                        <div class="notification-message">Humidity levels are slightly above the optimal range for your wheat crop. Consider adjusting irrigation.</div>
+                    </div>
+                    <div class="notification-item info">
+                        <div class="notification-time">Yesterday, 4:30 PM</div>
+                        <div class="notification-message">Weather forecast indicates rain in the next 24 hours. Consider postponing any planned irrigation.</div>
+                    </div>
+                    <div class="notification-item urgent">
+                        <div class="notification-time">2 days ago</div>
+                        <div class="notification-message">Potential pest detection in north-eastern section of your field. Immediate inspection recommended.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crop Health Tool Page (Hidden initially) -->
+        <div class="crop-health" id="cropHealthContent">
+            <h2 class="dashboard-title">Crop Health Assessment Tool</h2>
+            <p>Upload images of your crops for disease detection and get expert recommendations.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <!-- Fertilizers Page (Hidden initially) -->
+        <div class="fertilizers" id="fertilizersContent">
+            <h2 class="dashboard-title">Recommended Fertilizers</h2>
+            <p>Based on your soil conditions and crop type, here are personalized fertilizer recommendations.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <!-- Sell Your Crop Page (Hidden initially) -->
+        <div class="sell-crop" id="sellCropContent">
+            <h2 class="dashboard-title">Sell Your Crop</h2>
+            <p>Connect with buyers directly and get the best price for your produce.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <!-- Chatbot Page (Hidden initially) -->
+        <div class="chatbot" id="chatbotContent">
+            <h2 class="dashboard-title">Kisan Assistant</h2>
+            <p>Ask any farming-related questions and get instant expert answers.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <!-- Services Pages (All hidden initially) -->
+        <div class="order-saplings" id="orderSaplingsContent">
+            <h2 class="dashboard-title">Order Saplings</h2>
+            <p>Browse and order quality saplings for your next growing season.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <div class="cold-storage" id="coldStorageContent">
+            <h2 class="dashboard-title">Nearby Cold Storage Facilities</h2>
+            <p>Find and book space at cold storage facilities near your location.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <div class="drone-service" id="droneServiceContent">
+            <h2 class="dashboard-title">Book Drone Service</h2>
+            <p>Schedule drone services for crop monitoring, spraying and more.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <div class="market-price" id="marketPriceContent">
+            <h2 class="dashboard-title">Current Market Prices</h2>
+            <p>Get real-time information on market prices for various crops.</p>
+            <!-- Content will be added later -->
+        </div>
+
+        <div class="workers" id="workersContent">
+            <h2 class="dashboard-title">Hire Farm Workers</h2>
+            <p>Connect with skilled farm workers available in your area.</p>
+            <!-- Content will be added later -->
+        </div>
+    </div>
+
+<script src="app.js"></script></body>
+</html>

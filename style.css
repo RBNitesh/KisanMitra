@@ -1,0 +1,337 @@
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ea;
+            color: #333;
+        }
+        
+        /* Login Page Styles */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                        url('/api/placeholder/1200/800') center/cover no-repeat;
+        }
+        
+        .login-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo h1 {
+            color: #2e7d32;
+            font-size: 2.5rem;
+        }
+        
+        .logo p {
+            color: #689f38;
+            font-style: italic;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #c5e1a5;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .login-btn {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #1b5e20;
+        }
+        
+        /* Dashboard Styles */
+        .dashboard-container {
+            display: none;
+        }
+        
+        .navbar {
+            background-color: #2e7d32;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-small {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-item {
+            margin-right: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .nav-item:hover {
+            color: #c5e1a5;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        
+        .dropdown-content a {
+            color: #2e7d32;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f8e9;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-name {
+            color: white;
+            margin-right: 1rem;
+        }
+        
+        .logout-btn {
+            background-color: #c62828;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background-color: #b71c1c;
+        }
+        
+        /* Main Dashboard Content */
+        .dashboard-content {
+            padding: 2rem;
+        }
+        
+        .dashboard-title {
+            font-size: 1.8rem;
+            color: #2e7d32;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #c5e1a5;
+            padding-bottom: 0.5rem;
+        }
+        
+        .sensor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .sensor-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sensor-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sensor-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        
+        .sensor-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 0.5rem;
+        }
+        
+        .sensor-status {
+            padding: 0.35rem 0.75rem;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .status-normal {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .status-warning {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+        
+        .status-alert {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .notification-panel {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .notification-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2e7d32;
+        }
+        
+        .notification-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .notification-item {
+            padding: 0.75rem;
+            border-left: 4px solid;
+            margin-bottom: 0.75rem;
+            background-color: #fafafa;
+        }
+        
+        .notification-item.urgent {
+            border-left-color: #c62828;
+        }
+        
+        .notification-item.warning {
+            border-left-color: #ff8f00;
+        }
+        
+        .notification-item.info {
+            border-left-color: #2196f3;
+        }
+        
+        .notification-time {
+            color: #757575;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .notification-message {
+            font-size: 1rem;
+        }
+        
+        /* Other Content Pages (Hidden Initially) */
+        .crop-health, .fertilizers, .sell-crop, .chatbot, .order-saplings, .cold-storage, 
+        .drone-service, .market-price, .workers {
+            display: none;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .nav-menu {
+                margin-top: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+            
+            .nav-item {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                width: 100%;
+            }
+            
+            .user-info {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
